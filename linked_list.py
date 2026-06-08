@@ -150,31 +150,63 @@
     
 # print("None")
 
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+# a = Node(10)
+# b = Node(20)
+# c = Node(30)
+
+# a.next = b
+# b.next = c
+
+# temp = a
+
+# new_node = Node(40)
+
+# while temp.next:
+#     temp = temp.next
+    
+# temp.next = new_node
+
+# temp = a
+
+# while temp:
+#     print(temp.data, end=" -> ")
+#     temp = temp.next
+    
+# print("None")
+
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
-        
+    
 a = Node(10)
 b = Node(20)
-c = Node(30)
+c = Node(34)
 
 a.next = b
 b.next = c
 
-temp = a
-
-new_node = Node(40)
-
-while temp.next:
-    temp = temp.next
-    
-temp.next = new_node
+search_number = 34
 
 temp = a
+
+found = False
 
 while temp:
-    print(temp.data, end=" -> ")
-    temp = temp.next
+    if temp.data == search_number:
+        found = True
+        break
+    temp = temp.next 
     
-print("None")
+
+if found:
+    print("Found")
+else:
+    print("Not found")
+    
