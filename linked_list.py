@@ -180,33 +180,126 @@
 # print("None")
 
 
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+    
+# a = Node(10)
+# b = Node(20)
+# c = Node(34)
+
+# a.next = b
+# b.next = c
+
+# search_number = 34
+
+# temp = a
+
+# found = False
+
+# while temp:
+#     if temp.data == search_number:
+#         found = True
+#         break
+#     temp = temp.next 
+    
+
+# if found:
+#     print("Found")
+# else:
+#     print("Not found")
+
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+
+
+# a = Node(10)
+# b = Node(20)
+# c = Node(30)
+# d = Node(40)
+
+# a.next = b
+# b.next = c
+# c.next = d
+
+# delete_value = 30
+
+# temp = a
+
+# while temp.next:
+#     if temp.next.data == delete_value:
+#         temp.next = temp.next.next
+#         break
+
+#     temp = temp.next
+
+
+# temp = a
+
+# while temp:
+#     print(temp.data, end=" -> ")
+#     temp = temp.next
+
+# print("None")
+
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+# a = Node(10)
+# b = Node(20)
+# c = Node(30)
+# d = Node(40)
+
+# a.next = b
+# b.next = c
+# c.next = d
+
+# temp = a
+
+# delete_value = 10
+
+# while temp.next:
+#     if temp.next.data==delete_value:
+#         temp.next = temp.next.next
+#         break
+    
+#     temp = temp.next
+    
+# temp = a
+
+# while temp:
+#     print(temp.data, end=" -> ")
+#     temp = temp.next
+    
+# print("None")
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
-    
-a = Node(10)
-b = Node(20)
-c = Node(34)
+        
+
+a = Node(20)
+b= Node(30)
+c = Node(40)
 
 a.next = b
 b.next = c
 
-search_number = 34
+new_node = Node(44)
+new_node.next = a
+a = new_node
 
 temp = a
 
-found = False
-
 while temp:
-    if temp.data == search_number:
-        found = True
-        break
-    temp = temp.next 
-    
-
-if found:
-    print("Found")
-else:
-    print("Not found")
-    
+    print(temp.data, end=" -> ")
+    temp = temp.next
+print("None")
