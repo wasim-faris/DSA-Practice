@@ -280,26 +280,82 @@
     
 # print("None")
 
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+
+# a = Node(20)
+# b= Node(30)
+# c = Node(40)
+
+# a.next = b
+# b.next = c
+
+# new_node = Node(44)
+# new_node.next = a
+# a = new_node
+
+# temp = a
+
+# while temp:
+#     print(temp.data, end=" -> ")
+#     temp = temp.next
+# print("None")
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+# a = Node(10)
+# b = Node(20)
+# c = Node(34)
+
+# a.next = b
+# b.next = c
+
+# new_node = Node(45)
+
+# temp = a
+
+# while temp.next:
+#     temp = temp.next
+    
+# temp.next = new_node
+
+# temp = a
+
+# while temp:
+#     print(temp.data, end=" -> ")
+#     temp = temp.next
+    
+# print("None")
+
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
         
-
-a = Node(20)
-b= Node(30)
-c = Node(40)
+a = Node(34)
+b = Node(45)
+c = Node(34)
 
 a.next = b
 b.next = c
 
-new_node = Node(44)
+new_node = Node(89)
 new_node.next = a
+
 a = new_node
+
 
 temp = a
 
 while temp:
     print(temp.data, end=" -> ")
     temp = temp.next
+    
 print("None")
