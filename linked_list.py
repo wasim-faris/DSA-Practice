@@ -457,30 +457,34 @@ class Node:
         self.data = data
         self.next = None
         
-a = Node(243)
-b = Node(344)
-c = Node(66)
-d = Node(78)
-e = Node(24)
+a = Node(10)
+b = Node(20)
+c = Node(40)
+d = Node(50)
+e = Node(60)
 
 a.next = b
 b.next = c
 c.next = d
 d.next = e
 
-largest = a
-sec_largest = a
 
 head = a 
 temp = head
 
+new_node = Node(30)
+
 while temp:
-    if temp.data > largest.data:
-        sec_largest = largest
-        largest = temp
-    elif temp.data > sec_largest.data and temp.data != sec_largest.data:
-        sec_largest = temp
+    if temp.data == 20:
+        new_node.next = temp.next
+        temp.next = new_node
     temp = temp.next
-        
-print(f"Largest element in the linked list {largest.data}")
-print(f"Secound largest element in the linkedlist {sec_largest.data}")
+    
+temp = head 
+
+
+while temp:
+    print(temp.data, end=" -> ")
+    temp = temp.next
+    
+print("None")
