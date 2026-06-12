@@ -1,14 +1,9 @@
-arr = [10, 20, 30, 20, 40]
-target = 10
+arr = [10, 15, 20, 25, 30, 35]
+even_count = 0
 
-last_occ = -1
-target = 20
 
-for i in range(len(arr)):
-    if arr[i]==target:
-        last_occ = i
-
-if last_occ !=-1:
-    print(f"Last occurnce at {last_occ}")
-else:
-    print("Not found")
+for i in arr:
+    if i%2==0:
+        even_count+=1
+        
+print(even_count)

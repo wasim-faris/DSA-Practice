@@ -334,28 +334,153 @@
 # print("None")
 
 
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+# a = Node(34)
+# b = Node(45)
+# c = Node(34)
+
+# a.next = b
+# b.next = c
+
+# new_node = Node(89)
+# new_node.next = a
+
+# a = new_node
+
+
+# temp = a
+
+# while temp:
+#     print(temp.data, end=" -> ")
+#     temp = temp.next
+    
+# print("None")
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+# a = Node(1)
+# b = Node(2)
+# c = Node(3)
+# d = Node(4)
+
+# a.next = b
+# b.next = c
+# c.next = d
+
+# head = a 
+# current = head
+# prev = None
+
+# while current:
+#     new_node = current.next
+#     current.next = prev
+#     prev = current
+#     current = new_node
+    
+    
+    
+# head = prev
+
+# temp = head
+
+# while temp:
+#     print(temp.data, end=" -> ")
+#     temp = temp.next
+    
+# print("None")
+
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+        
+# a = Node(23)
+# b = Node(56)
+# c = Node(34)
+
+
+# search_num = 56
+
+# temp = a 
+
+# found = False
+# while temp.next:
+#     if temp.next.data == search_num:
+#         found = True
+#         break
+#     else:
+#         found = False
+        
+# if found:
+#     print("Element found ")
+# else:
+#     print("Not found the element")
+
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+        
+# a = Node(23)
+# b = Node(56)
+# c = Node(34)
+
+# largest = a
+
+
+# a.next = b
+# b.next = c
+
+# temp = a
+
+# while temp:
+#     if temp.data > largest.data:
+#         largest = temp
+#     temp = temp.next
+
+# print(largest.data)
+
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
         
-a = Node(34)
-b = Node(45)
-c = Node(34)
+a = Node(243)
+b = Node(344)
+c = Node(66)
+d = Node(78)
+e = Node(24)
 
 a.next = b
 b.next = c
+c.next = d
+d.next = e
 
-new_node = Node(89)
-new_node.next = a
+largest = a
+sec_largest = a
 
-a = new_node
-
-
-temp = a
+head = a 
+temp = head
 
 while temp:
-    print(temp.data, end=" -> ")
+    if temp.data > largest.data:
+        sec_largest = largest
+        largest = temp
+    elif temp.data > sec_largest.data and temp.data != sec_largest.data:
+        sec_largest = temp
     temp = temp.next
-    
-print("None")
+        
+print(f"Largest element in the linked list {largest.data}")
+print(f"Secound largest element in the linkedlist {sec_largest.data}")
