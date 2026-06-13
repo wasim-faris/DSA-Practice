@@ -489,44 +489,77 @@
     
 # print("None")
 
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+# a = Node(10)
+# b = Node(20)
+# c = Node(30)
+# d = Node(40)
+# e = Node(50)
+# f = Node(20)
+
+# a.next = b
+# b.next = c
+# c.next = d
+# d.next = e
+# e.next = f
+
+# head = a
+# temp = head
+
+# seen = set()
+
+# prev = None
+
+# while temp:
+#     if temp.data in seen:
+#         prev.next = temp.next
+#     else:
+#         seen.add(temp.data)
+#         prev = temp
+        
+#     temp = temp.next
+    
+# temp = head
+
+# while temp:
+#     print(temp.data, end="-> ")
+#     temp = temp.next
+    
+# print('None')
+
 class Node:
     def __init__(self, data):
-        self.data = data
+        self.data = data 
         self.next = None
-        
-a = Node(10)
-b = Node(20)
-c = Node(30)
-d = Node(40)
-e = Node(50)
-f = Node(20)
+
+a = Node(23)
+b = Node(34)
+c = Node(345)
 
 a.next = b
 b.next = c
-c.next = d
-d.next = e
-e.next = f
 
-head = a
+head = a 
 temp = head
+new_value = 34
 
-seen = set()
-
-prev = None
+dup = False
 
 while temp:
-    if temp.data in seen:
-        prev.next = temp.next
-    else:
-        seen.add(temp.data)
-        prev = temp
-        
+    if temp.data == new_value:
+        dup = True
+        break
     temp = temp.next
-    
-temp = head
-
-while temp:
-    print(temp.data, end="-> ")
-    temp = temp.next
-    
-print('None')
+ 
+if dup:
+    print("Item is duplicated so cant add")
+else:
+    temp = head
+    while temp.next:
+        temp = temp.next
+    temp.next = Node(new_value)
+    print("added node ")
