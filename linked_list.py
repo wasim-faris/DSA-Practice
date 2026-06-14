@@ -531,35 +531,36 @@
     
 # print('None')
 
-class Node:
-    def __init__(self, data):
-        self.data = data 
-        self.next = None
+# class Node:
+#     def __init__(self, data):
+#         self.data = data 
+#         self.next = None
 
-a = Node(23)
-b = Node(34)
-c = Node(345)
+# a = Node(23)
+# b = Node(34)
+# c = Node(345)
 
-a.next = b
-b.next = c
+# a.next = b
+# b.next = c
 
-head = a 
-temp = head
-new_value = 34
+# head = a 
+# temp = head
+# new_value = 34
 
-dup = False
+# dup = False
 
-while temp:
-    if temp.data == new_value:
-        dup = True
-        break
-    temp = temp.next
+# while temp:
+#     if temp.data == new_value:
+#         dup = True
+#         break
+#     temp = temp.next
  
-if dup:
-    print("Item is duplicated so cant add")
-else:
-    temp = head
-    while temp.next:
-        temp = temp.next
-    temp.next = Node(new_value)
-    print("added node ")
+# if dup:
+#     print("Item is duplicated so cant add")
+# else:
+#     temp = head
+#     while temp.next:
+#         temp = temp.next
+#     temp.next = Node(new_value)
+#     print("added node ")
+
