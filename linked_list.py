@@ -564,3 +564,65 @@
 #     temp.next = Node(new_value)
 #     print("added node ")
 
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+# arr = [1,2,3,4,5,6,7,8,9]
+
+# left = 0
+
+# right = len(arr) - 1
+# target = 7
+
+# while left <= right:
+#     mid = (left+right)//2
+    
+#     if arr[mid]==target:
+#         print(f"Target found at index {mid}")
+#         break
+    
+#     elif arr[mid] < target:
+#         left = mid+1
+#     else:
+#         right = mid - 1
+        
+        
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        
+arr = [1,2,36,7,3,4,65,67, 2]
+
+head = Node(arr[0])
+temp = head
+for i in range(1, len(arr)):
+    next_node = Node(arr[i])
+    temp.next = next_node
+    temp = next_node
+    
+temp = head
+
+prev = None
+seen = set()
+
+while temp:
+    if temp.data in seen:
+        prev.next = temp.next
+    else:
+        seen.add(temp.data)
+        prev = temp
+    temp = temp.next
+    
+temp = head 
+
+while temp:
+    print(temp.data, end="->")
+    temp = temp.next
+print("None")
+
+
+
