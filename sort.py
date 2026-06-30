@@ -1,13 +1,21 @@
-arr = [23,4,567,89,1,4,89,12,233,1,22]
+
+
+
+arr = [5, 2, 4, 6, 1, 3]
+
 n = len(arr)
-count = 0
-for i in range(n):
-    print(arr)
-    for j in range(0, n-1-i):
-        if arr[j] > arr[j+1]:
-            count+=1
-            arr[j], arr[j+1] = arr[j+1], arr[j]
 
-    print(f"after pass:- {i+1} arr is {arr}")
+for i in range(1, n):
+
+    key = arr[i]
+    j = i - 1
+
+    while j >= 0 and arr[j] > key:
+
+        arr[j + 1] = arr[j]
+        j -= 1
+
+    arr[j + 1] = key
 
 
+print(arr)
