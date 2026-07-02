@@ -17,18 +17,18 @@
 # print(arr)
 
 
-arr = [3,5,6,8,9,3,4]
+arr = [4,5,6,7,6,7,98,1,3,2,5]
+
 
 n = len(arr)
-
-is_swapped = False
+swap_count = 0
 
 for i in range(n):
-    is_swapped = False
     for j in range(n-i-1):
-        if arr[j]> arr[j+1]:
+        if arr[j] > arr[j+1]:
             arr[j], arr[j+1] = arr[j+1], arr[j]
-            is_swapped = True
-    if not is_swapped:
-        print("array is already sorted")
-        break
+            swap_count +=1
+
+print(f"total swap count {swap_count}")
+
+
