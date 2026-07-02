@@ -17,18 +17,22 @@
 # print(arr)
 
 
-arr = [4,5,6,7,6,7,98,1,3,2,5]
+arr = [2,3,4,5,1,6,7,8,]
 
 
 n = len(arr)
-swap_count = 0
 
-for i in range(n):
-    for j in range(n-i-1):
-        if arr[j] > arr[j+1]:
-            arr[j], arr[j+1] = arr[j+1], arr[j]
-            swap_count +=1
 
-print(f"total swap count {swap_count}")
+for i in range(1, n):
+    key = arr[i]
+    j = i-1
+    
+    while j >= 0 and arr[j] > key:
+        arr[j+1] = arr[j]
+        j-=1
+
+        arr[j+1] = key
+
+print(arr)
 
 
