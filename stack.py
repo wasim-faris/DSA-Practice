@@ -102,3 +102,19 @@ arr = [38, 27, 43, 3, 9, 82, 10]
 sorted_arr = merge_sort(arr)
 
 print(sorted_arr)
+
+
+
+arr = [10, 5, 20, 8, 15]
+
+largest = float('-inf')
+second_largest = float('-inf')
+
+for num in arr:
+    if num > largest:
+        second_largest = largest
+        largest = num
+    elif num > second_largest and num != largest:
+        second_largest = num
+
+print(second_largest)   
