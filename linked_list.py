@@ -755,3 +755,78 @@ temp = head
 while temp:
     print(temp.data, end="-> ")
     temp = temp.next
+
+
+
+# Node class
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+
+# Doubly Linked List class
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    # Add node at the end
+    def append(self, data):
+        new_node = Node(data)
+
+        if self.head is None:
+            self.head = new_node
+            return
+
+        current = self.head
+
+        while current.next:
+            current = current.next
+
+        current.next = new_node
+        new_node.prev = current
+
+    # Display list
+    def display(self):
+        current = self.head
+
+        while current:
+            print(current.data, end=" <-> ")
+            current = current.next
+
+        print("None")
+
+    # Reverse doubly linked list
+    def reverse(self):
+        current = self.head
+        previous = None
+
+        while current:
+            # Swap prev and next
+            current.prev, current.next = current.next, current.prev
+
+            # Move to the next node in the original list
+            previous = current
+            current = current.prev
+
+        # Update head
+        self.head = previous
+
+
+# Create doubly linked list
+dll = DoublyLinkedList()
+
+dll.append(10)
+dll.append(20)
+dll.append(30)
+dll.append(40)
+dll.append(50)
+
+print("Original list:")
+dll.display()
+
+dll.reverse()
+
+print("Reversed list:")
+dll.display()
